@@ -1,0 +1,144 @@
+--Wazer iz da shit ( don't copy line 1 put in synx )
+--config 30m bounty 32 hours -> 35 hours ( tested )
+
+if _G.wl_key then
+return
+end
+--Put Your Key Between ""
+_G.wl_key ='put ur key wazer'
+DelayTime = 300
+getgenv().FpsBoost = false
+getgenv().Setting = {
+    ["Team"] = "Pirates", --Marines
+    ["Webh00k"] = {
+        ["Enabled"] = true,
+        ["Embed"] = true,
+        ["StoredFruit"] = true,
+        ["ImageEmbed"] = true,
+        ["CustomImage"] = false,
+        ["CustomImageUrl"] = "", --Your Url
+        ["OnServerHop"] = true,
+        ["BountyChanged"] = true,
+    }, 
+    ["Panel"] = {
+      ["Enabled"] = false,
+      ["IgnoreSelfChat"] = true,
+    },
+    ["ChatKill"] = {
+        Enable = false,
+        Chat = {"Go Buy W-azure Now","I Got A Gaming Chair","I'm Just Too Good"
+        },
+    },
+    ["Mention"] = {
+        ["Enable"] = false,
+        ["Id"] = "everyone",
+        ["EveryBounty"] = 10000,
+    },
+    ["FpsLock"] = {
+        ["Enable"] = false,
+        ["Cap"] = 30,
+    },
+    ["LockBounty"] = {
+        ["Enable"] = true,
+        ["Cap"] = 30000000,
+    },
+    ["Click"] = {
+        ["Enable"] = true,
+        ["OnLowHealthDisable"] = false,
+        ["LowHealth"] = 3000,
+    },
+    ["Misc"] = {
+        ["AutoBuyRandomandStoreFruit"] = true,
+        ["AutoBuySurprise"] = true,
+    },
+    ["Invisible"] = true,
+    ["IgnoreFriends"] = true, --Server Hop When Your friends in your server
+    ["GunMethod"] = false, --Use Melee,Gun Will automaticly disable invisible for things
+    ["SpamSkill"] = true, -- Will use all skills as fast as possbile ignore holding skills
+    ["Weapons"] = {
+        ["Melee"] = {
+            ["Enable"] = true,
+            ["Delay"] = 2,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+               [ "X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+
+                ["C"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+        ["Blox Fruit"] = {
+            ["Enable"] = true,
+            ["Delay"] = 3,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 2,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+
+                ["C"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["V"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["F"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+        ["Gun"] = {
+            ["Enable"] = false,
+            ["Delay"] = 0,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 1,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+        ["Sword"] = {
+            ["Enable"] = false,
+            ["Delay"] = 0,
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 1,
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+    }
+}
+repeat wait()
+until game:IsLoaded()
+delay(DelayTime or 300,function()
+    local CG = game:GetService("CoreGui")
+    if not CG:FindFirstChild("W-azureHubAutoBounty") then
+       game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+    end
+end)
+wait(2)
+loadstring(game:HttpGet('https://scripts.luawl.com/hosted/1989/BloxFruitAutoBounty.lua'))()
