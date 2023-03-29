@@ -1,0 +1,2 @@
+getgenv().SecLoading = 120 -- Chỉnh ngu thì RAM crash 
+loadstring(game:HttpGet('https://cdn.chimovo.com/public/blocc-trai-cay/ramv2'))()
