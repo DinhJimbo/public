@@ -1,7 +1,6 @@
 repeat wait() until game:IsLoaded()
 --tu chinh config ma dung cho ngon
---wazer bu cai con cac tao
--- by obii#3012
+-- by obii#3012 ( s1t1nk hub on top )
 getgenv().Setting = {
     ["Team"] = "Marines", --Marines,Pirates
     ["Click"] = {
