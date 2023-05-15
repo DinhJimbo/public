@@ -1,21 +1,31 @@
-repeat wait() until game:IsLoaded()
---tu chinh config ma dung cho ngon
--- by obii#3012 ( s1t1nk hub on top )
 getgenv().Setting = {
     ["Team"] = "Marines", --Marines,Pirates
+    ["Webhook"] = {
+        ["Enabled"] = false,
+        ["Url Webhook"] = "", --Your Url
+    },
+    ["Misc"] = {
+        ["AutoBuyRandomandStoreFruit"] = true,
+        ["AutoBuySurprise"] = true,
+    },
     ["Click"] = {
         ["Enable"] = true,
-		["OnLowHealthDisable"] = false,
-        ["LowHealth"] = 3000,
+        ["Click Gun"] = false,
+        ["OnLowHealthDisable"] = false,
+        ["LowHealth"] = 8000,
     },
-	["SafeZone"] = {
-		["Enable"] = true,
-		["LowHealth"] = 5000,
-		["MaxHealth"] = 12345,
-		["Teleport Y"] = 1000
-	},
+    ["SafeZone"] = {
+        ["Enable"] = true,
+        ["LowHealth"] = 5000,
+        ["MaxHealth"] = 8000,
+        ["Teleport Y"] = 1000
+    },
+    ["Race V4"] = {
+        ["Enable"] = false,
+    },
     ["Invisible"] = true,
-    ["GunMethod"] = false, --Not Support
+    ["White Screen"]  =true,
+    ["GunMethod"] = false, --Support Only Melee And Gun,Not Invisible, Turn On Enabled Gun and Melee Please
     ["SpamSkill"] = true, -- Will use all skills as fast as possbile ignore holding skills
     ["Weapons"] = {
         ["Melee"] = {
@@ -66,10 +76,10 @@ getgenv().Setting = {
         },
         ["Gun"] = {
             ["Enable"] = false,
-            ["Delay"] = 1,
+            ["Delay"] = 3,
             ["Skills"] = {
                 ["Z"] = {
-                    ["Enable"] = false,
+                    ["Enable"] = true,
                     ["HoldTime"] = 1,
                 },
                 ["X"] = {
@@ -94,6 +104,4 @@ getgenv().Setting = {
         },
     }
 }
-
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BountyShit.lua"))()
