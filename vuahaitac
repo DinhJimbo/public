@@ -1,9 +1,9 @@
-script_key = "xvRDodaeopjiRFOnIWrbaoKhWxIBpOpQ"
+script_key = "rQLXwmbqDFyuEQGAzeGSMvsnuFeeKKvH"
 getgenv().WeaponsSetting = {
     ["Melee"] = {
         ["Enable"] = true,
         ["Delay"] = 3, 
-        ["SwitchNextWeaponIfCooldown"] = true, -- cf by  goob
+        ["SwitchNextWeaponIfCooldown"] = true, 
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
@@ -59,33 +59,33 @@ getgenv().WeaponsSetting = {
     },
     ["Sword"] = {
         ["Enable"] = true,
-        ["Delay"] = 1.5,
+        ["Delay"] = 1,
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.4,
-                ["TimeToNextSkill"] = 0,
+                ["HoldTime"] = 0.3,
+                ["TimeToNextSkill"] = 0.5,
             },
             ["X"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.2,
-                ["TimeToNextSkill"] = 0,
+                ["HoldTime"] = 0.4,
+                ["TimeToNextSkill"] = 0.5,
             },
         },
     },
     ["Gun"] = {
-        ["Enable"] = false,
-        ["Delay"] = 1.5,
+        ["Enable"] = true,
+        ["Delay"] = 1,
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
                 ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0,
+                ["TimeToNextSkill"] = 0.5,
             },
             ["X"] = {
                 ["Enable"] = true,
                 ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0,
+                ["TimeToNextSkill"] = 0.5,
             },
         },
     },
