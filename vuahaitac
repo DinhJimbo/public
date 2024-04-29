@@ -2,25 +2,25 @@ script_key = "rQLXwmbqDFyuEQGAzeGSMvsnuFeeKKvH"
 getgenv().WeaponsSetting = {
     ["Melee"] = {
         ["Enable"] = true,
-        ["Delay"] = 3, 
+        ["Delay"] = 2, 
         ["SwitchNextWeaponIfCooldown"] = true, 
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
                 ["NoPredict"] = true, -- TALON , Disable it 
-                ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0,
+                ["HoldTime"] = 0.6,
+                ["TimeToNextSkill"] = 0.3,
             },
         [ "X"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.3,
-                ["TimeToNextSkill"] = 0,
+                ["HoldTime"] = 0.2,
+                ["TimeToNextSkill"] = 0.3,
             },
 
             ["C"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.5,
-                ["TimeToNextSkill"] = 0,
+                ["HoldTime"] = 0.1,
+                ["TimeToNextSkill"] = 0.3,
             },
         },
     },
@@ -63,13 +63,13 @@ getgenv().WeaponsSetting = {
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.3,
-                ["TimeToNextSkill"] = 0.5,
+                ["HoldTime"] = 1,
+                ["TimeToNextSkill"] = 0,
             },
             ["X"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.4,
-                ["TimeToNextSkill"] = 0.5,
+                ["HoldTime"] = 0.1,
+                ["TimeToNextSkill"] = 0,
             },
         },
     },
@@ -79,13 +79,13 @@ getgenv().WeaponsSetting = {
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0.5,
+                ["HoldTime"] = 0,
+                ["TimeToNextSkill"] = 0,
             },
             ["X"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0.5,
+                ["HoldTime"] = 0,
+                ["TimeToNextSkill"] = 0,
             },
         },
     },
