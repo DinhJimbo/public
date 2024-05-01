@@ -1,4 +1,4 @@
-script_key = "rQLXwmbqDFyuEQGAzeGSMvsnuFeeKKvH" -- cf by mrbear
+script_key = "xvRDodaeopjiRFOnIWrbaoKhWxIBpOpQ" -- cf by mrbear
 getgenv().Team = "Pirates" -- Marines,Pirates
 
 getgenv().WeaponsSetting = {
