@@ -1,16 +1,15 @@
 script_key = "rQLXwmbqDFyuEQGAzeGSMvsnuFeeKKvH"
 getgenv().Team = "Pirates"
 getgenv().WeaponsSetting = {
-    
     ["Melee"] = {
         ["Enable"] = true,
-        ["Delay"] = 2, 
+        ["Delay"] = 3, 
         ["SwitchNextWeaponIfCooldown"] = true,
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
-                ["NoPredict"] = true, -- For Dragon Tailon, Disable it 
-                ["HoldTime"] = 2,
+                ["NoPredict"] = false, -- For Dragon Tailon, Disable it 
+                ["HoldTime"] = 0,
                 ["TimeToNextSkill"] = 0,
             },
         [ "X"] = {
@@ -33,7 +32,7 @@ getgenv().WeaponsSetting = {
         ["Skills"] = {
             ["Z"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 0,
+                ["HoldTime"] = 2,
                 ["TimeToNextSkill"] = 0,
             },
             ["X"] = {
@@ -44,12 +43,12 @@ getgenv().WeaponsSetting = {
 
             ["C"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 2,
+                ["HoldTime"] = 0,
                 ["TimeToNextSkill"] = 0,
             },
             ["V"] = {
                 ["Enable"] = true,
-                ["HoldTime"] = 3,
+                ["HoldTime"] = 0,
                 ["TimeToNextSkill"] = 0,
             },
             ["F"] = {
@@ -60,7 +59,7 @@ getgenv().WeaponsSetting = {
         },
     },
     ["Sword"] = {
-        ["Enable"] = false,
+        ["Enable"] = true,
         ["Delay"] = 0.5,
         ["Skills"] = {
             ["Z"] = {
@@ -76,7 +75,7 @@ getgenv().WeaponsSetting = {
         },
     },
     ["Gun"] = {
-        ["Enable"] = false,
+        ["Enable"] = true,
         ["Delay"] = 0.5,
         ["Skills"] = {
             ["Z"] = {
@@ -92,10 +91,10 @@ getgenv().WeaponsSetting = {
         },
     },
 }
-getgenv().Theme = true { -- getgenv().Theme = false if you want to disable
+getgenv().Theme = { -- getgenv().Theme = false if you want to disable
     OldTheme = false,
     Name="Raiden", --"Raiden","Ayaka","Hutao","Yelan","Miko","Nahida","Ganyu","Keqing","Nilou","Barbara","Zhongli","Layla"
-    Custom= {
+    Custom={
             ["Enable"] = false,
             ['char_size'] = UDim2.new(0.668, 0, 1.158, 0),
             ['char_pos'] = UDim2.new(0.463, 0, -0.105, 0),
