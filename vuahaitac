@@ -1,6 +1,5 @@
 script_key = "xvRDodaeopjiRFOnIWrbaoKhWxIBpOpQ" -- cf by mrbear
 getgenv().Team = "Pirates" -- Marines,Pirates
-
 getgenv().WeaponsSetting = {
     ["Melee"] = {
         ["Enable"] = true,
