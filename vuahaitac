@@ -1,3 +1,6 @@
+if script_key then
+return
+end
 script_key = "xvRDodaeopjiRFOnIWrbaoKhWxIBpOpQ" -- cf by mrbear
 getgenv().Team = "Pirates" -- Marines,Pirates
 getgenv().WeaponsSetting = {
