@@ -6,7 +6,7 @@ getgenv().BountyFarm = {
         ["Skip Timer"] = 60, -- Skip if took more than x seconds to kill
     },
     ["Hop Server"] = {
-        ["Delay"] = 40,
+        ["Delay"] = 60,
         ["Below Ping"] = 100,
         ["Hop Ping"] = 1000,
     },
