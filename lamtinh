@@ -1,111 +1,39 @@
-if script_key then
-return
-end
-script_key = "rQLXwmbqDFyuEQGAzeGSMvsnuFeeKKvH" -- cf by mrbear
-getgenv().Team = "Pirates" -- Marines,Pirates
-getgenv().WeaponsSetting = {
-    ["Melee"] = {
-        ["Enable"] = true,
-        ["Delay"] = 2, 
-        ["SwitchNextWeaponIfCooldown"] = true,
-        ["Skills"] = {
-            ["Z"] = {
-                ["Enable"] = true,
-                ["NoPredict"] = false, -- For Dragon Tailon, Disable it 
-                ["HoldTime"] = 0.6,
-                ["TimeToNextSkill"] = 0.3, -- cf by mrbear
-            },
-        [ "X"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.3,
-                ["TimeToNextSkill"] = 0.3, -- cf by mrbear
-            },
-
-            ["C"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0.3, -- cf by mrbear
-            },
-        },
+getgenv().BountyFarm = {
+    ["Script"] = {
+        ["Team"] = "Pirates", -- Pirates/Marines
+        ["Panic % Health"] = 40,
+        ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune"},
+        ["Skip Timer"] = 60, -- Skip if took more than x seconds to kill
     },
-    ["Blox Fruit"] = {
-        ["Enable"] = true,
-        ["Delay"] = 2,
-        ["SwitchNextWeaponIfCooldown"] = true,
-        ["Skills"] = {
-            ["Z"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.5,
-                ["TimeToNextSkill"] = 0.3, -- cf by mrbear
-            },
-            ["X"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.3,
-                ["TimeToNextSkill"] = 0.3, -- cf by mrbear
-            },
-
-            ["C"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.3,
-                ["TimeToNextSkill"] = 0.3, -- cf by mrbear
-            },
-            ["V"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0.3, -- cf by MrBear
-            },
-            ["F"] = {
-                ["Enable"] = false,
-                ["HoldTime"] = 0,
-                ["TimeToNextSkill"] = 0, -- cf by MrBear
-            },
-        },
+    ["Hop Server"] = {
+        ["Delay"] = 40,
+        ["Below Ping"] = 100,
+        ["Hop Ping"] = 1000,
     },
-    ["Sword"] = {
-        ["Enable"] = false,
-        ["Delay"] = 0,
-        ["Skills"] = {
-            ["Z"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0,
-                ["TimeToNextSkill"] = 0,
-            },
-            ["X"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0,
-                ["TimeToNextSkill"] = 0,
-            },
+    ["Skill"] = {
+        ["Cycle"] = false, -- Use in a Cycle (making use used all skill) instead of use prioritize the first order
+        ["Prioritize"] = {"Melee", "Sword", "Blox Fruit", "Gun"}, -- Left to right (first to last)
+        -- ["Skill"] = {Enable, Predict, Hold, Delay TP Safe, Delay Next Skill}
+        ["Melee"] = {
+            ["Z"] = {true, false, 0.6, 1},
+            ["X"] = {true, true, 0.2, 1},
+            ["C"] = {true, true, 0.1, 1},
         },
-    },
-    ["Gun"] = {
-        ["Enable"] = false,
-        ["Delay"] = 0.5,
-        ["Skills"] = {
-            ["Z"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0,
-            },
-            ["X"] = {
-                ["Enable"] = true,
-                ["HoldTime"] = 0.1,
-                ["TimeToNextSkill"] = 0,
-            },
+        ["Blox Fruit"] = {
+            ["Z"] = {false, true, 2, 0.5},
+            ["X"] = {false, true, 0, 0.5},
+            ["C"] = {false, true, 0, 0.5},
+            ["V"] = {false, true, 0, 0.5},
+            ["F"] = {false, true, 0, 0.5},
+        },
+        ["Sword"] = {
+            ["Z"] = {true, true, 0.3, 0.5, 1},
+            ["X"] = {true, true, 0.4, 0.5, 1},
+        },
+        ["Gun"] = {
+            ["Z"] = {false, true, 0, 0.5, 1},
+            ["X"] = {false, true, 0, 0.5, 1},
         },
     },
 }
-getgenv().Theme = { -- getgenv().Theme = false if you want to disable
-    OldTheme = false,
-    Name="Raiden", --"Raiden","Ayaka","Hutao","Yelan","Miko","Nahida","Ganyu","Keqing","Nilou","Barbara","Zhongli","Layla"
-    Custom={
-            ["Enable"] = true,
-            ['char_size'] = UDim2.new(0.668, 0, 1.158, 0),
-            ['char_pos'] = UDim2.new(0.463, 0, -0.105, 0),
-            ['title_color'] = Color3.fromRGB(0, 0, 0, 1),
-            ['titleback_color'] = Color3.fromRGB(0, 0, 0, 1), -- color black
-            ['list_color'] = Color3.fromRGB(0, 0, 0, 1),
-            ['liststroke_color'] = Color3.fromRGB(0, 0, 0, 1), -- color black
-            ['button_color'] = Color3.fromRGB(0, 0, 0, 1)
-       }
-}
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b6d24ef1f7dab9c7b22f259a3db6c47e.lua"))()
+loadstring(game:HttpGet("https://api.nousigi.com/scripts/bfbounty.lua"))()
