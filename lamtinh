@@ -11,7 +11,7 @@ getgenv().BountyFarm = {
             ["Ultra Optimize"] = true,
     },
     ["Hop Server"] = {
-        ["Delay"] = 60,
+        ["Delay"] = 40,
         ["Below Ping"] = 100,
         ["Hop Ping"] = 1000,
     },
