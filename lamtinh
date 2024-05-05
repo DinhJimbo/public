@@ -3,6 +3,7 @@ getgenv().BountyFarm = {
         ["Team"] = "Pirates", -- Pirates/Marines
         ["Panic % Health"] = 40,
         ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune"},
+        ["Ignore Bounty"] = 5000000, -- Ignore user with higher than x bounty than you
         ["Skip Timer"] = 120, -- Skip if took more than x seconds to kill
     },
     ["Performance"] = {
