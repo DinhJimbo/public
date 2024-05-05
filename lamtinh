@@ -1,44 +1,44 @@
 getgenv().BountyFarm = {
     ["Script"] = {
         ["Team"] = "Pirates", -- Pirates/Marines
-        ["Panic % Health"] = 40,
-        ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune"},
-        ["Ignore Bounty"] = 5000000, -- Ignore user with higher than x bounty than you
-        ["Skip Timer"] = 120, -- Skip if took more than x seconds to kill
+        ["Panic % Health"] = 40, -- Teleport to Safe Zone if player below x % HP
+        ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune", "Mammoth-Mammoth"}, -- Ignore user with the ate Blox Fruit
+        ["Ignore Bounty"] = 50000000, -- Ignore user with higher than x bounty than you
+        ["Skip Timer"] = 60, -- Skip if took more than x seconds to kill
     },
     ["Performance"] = {
-            ["Black Screen"] = true,
-            ["Hide Map"] = false,
-            ["Ultra Optimize"] = false,
+        ["Black Screen"] = false,
+        ["Hide Map"] = false,
+        ["Ultra Optimize"] = false,
     },
     ["Hop Server"] = {
-        ["Delay"] = 40,
-        ["Below Ping"] = 100,
-        ["Hop Ping"] = 1000,
+        ["Delay"] = 10, -- Delay before Hop Server
+        ["Below Ping"] = 100, -- Hop to Server below x ping
+        ["Hop Ping"] = 1000, -- Hop if current server ping is higher than x 
     },
     ["Skill"] = {
         ["Cycle"] = false, -- Use in a Cycle (making use used all skill) instead of use prioritize the first order
-        ["Prioritize"] = {"Melee", "Sword", "Blox Fruit", "Gun"}, -- Left to right (first to last)
-        -- ["Skill"] = {Enable, Predict, Hold, Delay TP Safe, Delay Next Skill}
+        ["Prioritize"] = {"Melee", "Blox Fruit", "Sword", "Gun"}, -- Use skill Left to right (first to last)
+        -- ["Skill"] = {Enable, Predict, Hold, Delay Next Skill}
         ["Melee"] = {
-            ["Z"] = {true, false, 0.6, 1},
-            ["X"] = {true, true, 0.2, 1},
-            ["C"] = {true, true, 0.1, 1},
+            ["Z"] = {true, false, 0.6, 0.3},
+            ["X"] = {true, true, 0.3, 0.3},
+            ["C"] = {true, true, 0.1, 0.3},
         },
         ["Blox Fruit"] = {
-            ["Z"] = {false, true, 2, 0.5},
-            ["X"] = {false, true, 0, 0.5},
-            ["C"] = {false, true, 0, 0.5},
-            ["V"] = {false, true, 0, 0.5},
+            ["Z"] = {true, true, 0.5, 0.3},
+            ["X"] = {true, true, 0.3, 0.3},
+            ["C"] = {true, true, 0.3, 0.3},
+            ["V"] = {true, true, 0.1, 0.3},
             ["F"] = {false, true, 0, 0.5},
         },
         ["Sword"] = {
-            ["Z"] = {true, true, 0.3, 0.5, 1},
-            ["X"] = {true, true, 0.4, 0.5, 1},
+            ["Z"] = {false, true, 0, 1},
+            ["X"] = {false, true, 0, 1},
         },
         ["Gun"] = {
-            ["Z"] = {false, true, 0, 0.5, 1},
-            ["X"] = {false, true, 0, 0.5, 1},
+            ["Z"] = {false, true, 0, 1},
+            ["X"] = {false, true, 0, 1},
         },
     },
 }
