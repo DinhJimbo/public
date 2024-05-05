@@ -3,7 +3,7 @@ getgenv().BountyFarm = {
         ["Team"] = "Pirates", -- Pirates/Marines
         ["Panic % Health"] = 40,
         ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune"},
-        ["Skip Timer"] = 60, -- Skip if took more than x seconds to kill
+        ["Skip Timer"] = 120, -- Skip if took more than x seconds to kill
     },
     ["Performance"] = {
             ["Black Screen"] = true,
