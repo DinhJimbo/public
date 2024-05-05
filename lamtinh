@@ -21,20 +21,20 @@ getgenv().BountyFarm = {
         ["Prioritize"] = {"Melee", "Blox Fruit", "Sword", "Gun"}, -- Use skill Left to right (first to last)
         -- ["Skill"] = {Enable, Predict, Hold, Delay Next Skill}
         ["Melee"] = {
-            ["Z"] = {true, false, 0.6, 0.3},
-            ["X"] = {true, true, 0.3, 0.3},
+            ["Z"] = {true, false, 0.1, 0.3},
+            ["X"] = {true, true, 0.1, 0.3},
             ["C"] = {true, true, 0.1, 0.3},
         },
         ["Blox Fruit"] = {
-            ["Z"] = {true, true, 0.5, 0.3},
-            ["X"] = {true, true, 0.3, 0.3},
-            ["C"] = {true, true, 0.3, 0.3},
-            ["V"] = {true, true, 0.1, 0.3},
+            ["Z"] = {false, true, 0.5, 0.3},
+            ["X"] = {false, true, 0.3, 0.3},
+            ["C"] = {false, true, 0.3, 0.3},
+            ["V"] = {false, true, 0.1, 0.3},
             ["F"] = {false, true, 0, 0.5},
         },
         ["Sword"] = {
-            ["Z"] = {false, true, 0, 1},
-            ["X"] = {false, true, 0, 1},
+            ["Z"] = {true, true, 0, 1},
+            ["X"] = {true, true, 0, 1},
         },
         ["Gun"] = {
             ["Z"] = {false, true, 0, 1},
