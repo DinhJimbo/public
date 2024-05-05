@@ -8,7 +8,7 @@ getgenv().BountyFarm = {
     ["Performance"] = {
             ["Black Screen"] = true,
             ["Hide Map"] = true,
-            ["Ultra Optimize"] = true,
+            ["Ultra Optimize"] = false,
     },
     ["Hop Server"] = {
         ["Delay"] = 40,
