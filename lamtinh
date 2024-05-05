@@ -7,9 +7,9 @@ getgenv().BountyFarm = {
         ["Skip Timer"] = 60, -- Skip if took more than x seconds to kill
     },
     ["Performance"] = {
-        ["Black Screen"] = false,
+        ["Black Screen"] = true,
         ["Hide Map"] = false,
-        ["Ultra Optimize"] = false,
+        ["Ultra Optimize"] = true,
     },
     ["Hop Server"] = {
         ["Delay"] = 10, -- Delay before Hop Server
