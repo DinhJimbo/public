@@ -4,6 +4,7 @@ getgenv().BountyFarm = {
         ["Panic % Health"] = 40, -- Teleport to Safe Zone if player below x % HP
         ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune", "Mammoth-Mammoth"}, -- Ignore user with the ate Blox Fruit
         ["Ignore Bounty"] = 50000000, -- Ignore user with higher than x bounty than you
+        ["M1 Health"] = 90,
         ["Skip Timer"] = 60, -- Skip if took more than x seconds to kill
     },
     ["Performance"] = {
