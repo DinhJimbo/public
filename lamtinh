@@ -5,7 +5,7 @@ getgenv().BountyFarm = {
         ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune", "Mammoth-Mammoth"}, -- Ignore user with the ate Blox Fruit
         ["Ignore Bounty"] = 50000000, -- Ignore user with higher than x bounty than you
         ["M1 Health"] = 90,
-        ["Skip Timer"] = 60, -- Skip if took more than x seconds to kill
+        ["Skip Timer"] = 120, -- Skip if took more than x seconds to kill
     },
     ["Performance"] = {
         ["Black Screen"] = true,
