@@ -13,7 +13,7 @@ getgenv().BountyFarm = {
         ["Ultra Optimize"] = false,
     },
     ["Hop Server"] = {
-        ["Delay"] = 10, -- Delay before Hop Server
+        ["Delay"] = 60, -- Delay before Hop Server
         ["Below Ping"] = 100, -- Hop to Server below x ping
         ["Hop Ping"] = 1000, -- Hop if current server ping is higher than x 
     },
