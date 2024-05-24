@@ -1,46 +1,78 @@
-getgenv().BountyFarm = {
-    ["Script"] = {
-        ["Team"] = "Pirates", -- Pirates/Marines
-        ["Panic % Health"] = 40, -- Teleport to Safe Zone if player below x % HP
-        ["Ignore User"] = {"Buddha-Buddha", "Portal-Portal", "Kitsune-Kitsune", "Mammoth-Mammoth"}, -- Ignore user with the ate Blox Fruit
-        ["Ignore Bounty"] = 50000000, -- Ignore user with higher than x bounty than you
-        ["M1 Health"] = 90,
-        ["Skip Timer"] = 120, -- Skip if took more than x seconds to kill
-    },
-    ["Performance"] = {
-        ["Black Screen"] = true,
-        ["Hide Map"] = false,
-        ["Ultra Optimize"] = false,
-    },
-    ["Hop Server"] = {
-        ["Delay"] = 60, -- Delay before Hop Server
-        ["Below Ping"] = 100, -- Hop to Server below x ping
-        ["Hop Ping"] = 1000, -- Hop if current server ping is higher than x 
-    },
-    ["Skill"] = {
-        ["Cycle"] = false, -- Use in a Cycle (making use used all skill) instead of use prioritize the first order
-        ["Prioritize"] = {"Melee", "Blox Fruit", "Sword", "Gun"}, -- Use skill Left to right (first to last)
-        -- ["Skill"] = {Enable, Predict, Hold, Delay Next Skill}
-        ["Melee"] = {
-            ["Z"] = {true, false, 0.1, 0.3},
-            ["X"] = {true, true, 0.1, 0.3},
-            ["C"] = {true, true, 0.1, 0.3},
-        },
-        ["Blox Fruit"] = {
-            ["Z"] = {false, true, 0.5, 0.3},
-            ["X"] = {false, true, 0.3, 0.3},
-            ["C"] = {false, true, 0.3, 0.3},
-            ["V"] = {false, true, 0.1, 0.3},
-            ["F"] = {false, true, 0, 0.5},
-        },
-        ["Sword"] = {
-            ["Z"] = {true, true, 0, 1},
-            ["X"] = {true, true, 0, 1},
-        },
-        ["Gun"] = {
-            ["Z"] = {false, true, 0, 1},
-            ["X"] = {false, true, 0, 1},
-        },
-    },
-}
-loadstring(game:HttpGet("https://api.nousigi.com/scripts/bfbounty.lua"))()
+local player = game.Players.LocalPlayer
+
+function checkMoneyValue()
+    if player and player.leaderstats and player.leaderstats:FindFirstChild("Money") then
+        return 1
+    else
+        return 0
+    end
+end
+
+local function isGuiObjectVisible(guiObject)
+    if typeof(guiObject) == "Instance" and guiObject:IsA("GuiObject") then
+        return guiObject.Visible
+    else
+        return false
+    end
+end
+
+local function teleportIfPlayAgainInvisible()
+    local matchFinishGui = player.PlayerGui.Match.MatchFinish
+
+    if matchFinishGui then
+        local isVisible = isGuiObjectVisible(matchFinishGui)
+        if isVisible then
+            local playAgainFrame = matchFinishGui.MatchFinishFrame.EndOptions.PlayAgain
+            local isPlayAgainVisible = isGuiObjectVisible(playAgainFrame)
+            if not isPlayAgainVisible then
+                game:GetService("TeleportService"):Teleport(game.PlaceId)
+            end
+        else
+            print("MatchFinish không hiển thị.")
+        end
+    else
+        print("MatchFinish không tồn tại.")
+    end
+end
+
+local promptOverlay = game:GetService("CoreGui").RobloxPromptGui.promptOverlay
+local connection
+
+connection = promptOverlay.ChildAdded:Connect(function(child)
+    if child.Name == "ErrorPrompt" and child:FindFirstChild("MessageArea") and child.MessageArea:FindFirstChild("ErrorFrame") then
+        game:GetService("TeleportService"):Teleport(game.PlaceId)
+        connection:Disconnect()
+    end
+end)
+
+setfpscap(15)
+spawn(function()
+    while true do 
+        teleportIfPlayAgainInvisible()
+
+        local data = {}
+        data['Basic Data'] = {}
+        data['Basic Data']['Level'] = 2550
+        data['Basic Data']['Beli'] = checkMoneyValue()
+        data['Basic Data']['Fragments'] = 1
+        data['Basic Data']['DevilFruit'] = 0
+        data['Basic Data']['Race'] = "TTD"
+        data['Basic Data']['Fighting Style'] = "TTD"
+
+        data['Items Inventory'] = {""}
+        data['Fruits Inventory'] = {""}
+
+        -- Write file
+        local a,b = pcall(function()
+            writefile(string.format("%sData.json", player.Name), game:GetService("HttpService"):JSONEncode(data))
+        end)
+
+        if a then
+            print(string.format("The file with name %sData.json has been written", player.Name))
+        else
+            warn("got error:",b)
+        end
+
+        wait(35)
+    end
+end)
