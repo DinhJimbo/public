@@ -7,7 +7,7 @@ local function disableArceusX()
     end
     return false
 end
-getgenv().ImportMacro = "https://cdn.discordapp.com/attachments/1084313649600012369/1247627333561749536/INF_Lava.txt?ex=66ccd200&is=66cb8080&hm=1b6a4ad8d1c49da5e6d0e39a1a95743d5dc1e0efb55b249fcad596716e5b6965&"
+getgenv().ImportMacro = "https://raw.githubusercontent.com/DinhJimbo/public/main/concac"
 getgenv().Config = {
     ["SelectChapter"] = "Infinite",
     ["AutoSave"] = true,
